@@ -16,6 +16,10 @@ const posts = [
     },
 ]
 
+app.get('/posts', (req, res) => {
+    res.json(posts)
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server started on Port ${PORT}`)
   })
