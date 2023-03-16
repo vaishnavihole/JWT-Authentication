@@ -5,14 +5,16 @@ app.use(express.json())
 
 const PORT = 5000;
 
-app.get('/users', (req, res)=>{
-    res.json({
-      success: true,
-      data: "Users Data",
-      message: "Users fetched successfully"
-    })
-  })
-  
+const posts = [
+    {
+        username: 'kyle',
+        title: 'Post 1'
+    },
+    {
+        username: 'Jim',
+        title: 'Post 2'
+    },
+]
 
 app.listen(PORT, ()=>{
     console.log(`Server started on Port ${PORT}`)
