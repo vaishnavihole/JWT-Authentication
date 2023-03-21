@@ -5,7 +5,11 @@ app.use(express.json())
 
 const PORT = 5000;
 
-
+app.post('/login', async(req, res) => {
+    res.json({
+        success: true,
+    })
+})
 
 app.listen(PORT, ()=>{
     console.log(`Server started on Port ${PORT}`)
